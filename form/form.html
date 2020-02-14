@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD
+    </title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();show1()" autocomplete="off" id="first">
+                    <div>
+                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>EMP Code*</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label>Salary*</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>City*</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <div id="dynamicCheck" class="form-action">
+                        <label >Education</label>
+                        
+                        <input type="button" value="Add" onclick="createNewElement();"/>
+                     </div>
+                     
+                     <div id="newElementId">New inputbox goes here:</div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>EMP Code</th>
+                            <th>Salary</th>
+                            <th>City</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="form.js"></script>
+</body>
+
+</html>
