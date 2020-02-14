@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="fir.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+            <div class="col-md-8 m-auto ">
+               
+                <form action="#" id="firstform">
+                    <h1>Registration Form</h1>
+                    <div class="form-group">*
+                        <label>Username</label>
+                        <input type="text" name="users" id="users" onblur="validate1(this,'username')" class="form-control" autocomplete="off">
+                        <p id="username" class="text-danger"></p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="Email" id="Emailid"  onblur="validate1(this,'mail')"  class="form-control" >
+                        <span id="mail" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="pass" id="pwd" onblur="validate1(this,'password');validation()" class="form-control">
+                        <span id="password" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" name="crfm" id="confrmpwd" onblur="cofrm();validation()" onblur="validate1(this,'cnfrmpassword')" class="form-control">
+                        <span id="cnfrmpassword" class="text-danger"></span>
+                    </div>
+
+                    
+                    <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input type="text" name="mob" id="mobno" onblur="validate1(this,'number');validation()" class="form-control">
+                        <span id="number" class="text-danger"></span>
+                    </div>
+                    <div >
+                        <input type="checkbox"  name="submit">please click
+                        <span id="num" class="text-danger"></span>
+                    </div>
+
+                    
+                    
+                    
+                        
+                        <input  class="btn btn-danger" value="Next" onclick="show();val();loader()" id="btnn" >
+                
+                </form>
+                
+
+
+            </div>
+        </div>
+        <div id="imgs" ><img src="loader.gif"></div>
+        <div class="row">
+            <div class="col-md-8 m-auto ">
+               
+                <form action="#" onsubmit="return my()" id="secondform">
+                    <h1> Form2</h1>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" name="adders" id="address" onblur="validate1(this,'adderserrorr')" class="form-control" autocomplete="off">
+                        <p id="adderserrorr" class="text-danger"></p>
+                    </div>
+
+                   
+                    <div >
+                        <input type="date" id="date" >
+                        <button onclick="dates()" type="button" >ages</button>
+                        <p id="age" ></p>
+                    </div>
+                    <textarea  name="message" onkeyup="u(this,er)"></textarea>
+                    <label id="er"></label>/10
+                
+ 
+
+                   <input type="submit" class="btn btn-danger" onclick="show1()" value="submit" id="btnn" >
+                
+                </form>
+               
+                
+
+
+            </div>
+        </div>
+             </div>
+        
+        <p id="result">result is</p>
+        
+    </body>
+    <script src="new.js">
+        
+
+    </script>
+</html>
